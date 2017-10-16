@@ -83,6 +83,22 @@ public class TweetDAOImpl implements TweetDAO {
 
         return listTweets;
     }
+    
+    @Override
+	public int delete(Tweet user_username, Tweet tweet) {
+		String tweet_here = tweet.getTweet();
+		String username = tweet_here.split(",")[0];
+		String tweetDelete = tweet_here.split(",")[1]; 
+		String sql = "DELETE from tweets where user_username = ? AND tweet = ?";
+        try {
+        	int abc = jdbcTemplate.update(sql,new Object[] {username,tweetDelete});
+            System.out.println("THE NO OF ROWS DELETED IS : " + abc);
+            return abc;
+        }
+        catch (DataIntegrityViolationException e) {
+            return 0;
+        }
+	}
 
     public String getUsername() {
         String username;

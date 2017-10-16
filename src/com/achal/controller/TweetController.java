@@ -40,16 +40,7 @@ public class TweetController {
         modeldel.setViewName("tweets/deleteTweets");
         return modeldel;
     }
-
-   /* //Delete Tweet Page
-    @RequestMapping(value = "/deleteTweet", method = RequestMethod.DELETE)
-    public ModelAndView deleteTweet(ModelAndView modelDel) {
-        Tweet newTweet = new Tweet();
-        modelDel.addObject("tweet", newTweet);
-        modelDel.setViewName("tweets/deleteTweets");
-        return modelDel;
-    }
-    */
+    
     // NEW TWEET
     @RequestMapping(value = "/tweet/create", method = RequestMethod.POST, produces = {"application/json","application/xml"})
     @ResponseBody
@@ -65,9 +56,6 @@ public class TweetController {
         }
     }
     
-    
-
-
     // GET ALL TWEETS
     @RequestMapping(value = "/tweets/formatted", method = RequestMethod.GET)
     @ResponseBody
@@ -91,21 +79,22 @@ public class TweetController {
         return model;
     }
 
-    // GET ALL TWEETS AS XML OR JSON
-    @RequestMapping(value = "/tweets", method = RequestMethod.GET, produces = {"application/json","application/xml"})
+    //DELETE TWEET
+    @RequestMapping(value = "/deleteTweet", method = RequestMethod.POST, produces = {"application/json","application/xml"})
     @ResponseBody
-    public List<Tweet> tweets_XML_JSON(@RequestParam(value = "search", defaultValue = "", required=false) String search) {
-        List<Tweet> listTweets = tweetDAO.searchTweets(search);
-        return listTweets;
-    }
-
-    // GET TWEETS OF A USER AS JSON AND XML
-    @RequestMapping(value = "/tweets/{username}", method = RequestMethod.GET, produces = {"application/json","application/xml"})
-    @ResponseBody
-    public List<Tweet> tweetsUser_XML_JSON(@PathVariable String username, @RequestParam(value = "search", defaultValue = "", required=false) String search) {
-        List<Tweet> listTweets = tweetDAO.searchUserTweets(username, search);
-        return listTweets;
-    }
-    
- 
+    public ResponseEntity deleteTweet(Tweet username,Tweet tweet) {
+    	System.out.println("I AM INSIDE THE ACTUAL DELETE");
+    	System.out.println("INSIDE THE DELETE TWEET THE VALUE OF TWEEET IS : " + tweet.getTweet());
+    	//System.out.println("INSIDE THE DELETE TWEET THE VALUE OF USERNAME IS : " + user_username.getUser_username());
+        //UserStatus unfollowForm = new UserStatus();
+        int result = tweetDAO.delete(username, tweet);
+        System.out.println("THE RESULT VALUE IS : " + result);
+    	//int result = tweetDAO.delete(tweet);
+        if (result == 1) {
+        	return ResponseEntity.ok("{\"message\": \"Success!\"}");
+        	}
+        else {
+        	return ResponseEntity.status(HttpStatus.BAD_REQUEST).body("{\"message\": \"Error!\"}");
+        }
+   }
 }
