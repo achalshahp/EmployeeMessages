@@ -5,7 +5,11 @@
 		  http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
 		 version="3.0">
 
+<<<<<<< HEAD
 	<display-name>Employee Twitter</display-name>
+=======
+	<display-name>Employee Twitter :: Spring MVC Application</display-name>
+>>>>>>> 7e3c89a3fdc3c01a583d31dbb6ac23104d6ed3f4
 
 	<listener>
 		<listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
@@ -58,4 +62,8 @@
 		<error-code>404</error-code>
 		<location>/404</location>
 	</error-page>
+<<<<<<< HEAD
 </web-app>
+=======
+</web-app>
+>>>>>>> 7e3c89a3fdc3c01a583d31dbb6ac23104d6ed3f4

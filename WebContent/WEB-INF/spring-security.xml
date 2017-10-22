@@ -20,7 +20,11 @@
                        access="permitAll" />
         <intercept-url pattern="/logout"
                        access="permitAll" />
+<<<<<<< HEAD
         <intercept-url pattern="/feed"
+=======
+        <intercept-url pattern="/index"
+>>>>>>> 7e3c89a3fdc3c01a583d31dbb6ac23104d6ed3f4
                        access="hasAnyRole('ROLE_USER,ROLE_ADMIN')" />
         <intercept-url pattern="/tweet/**"
                        access="hasAnyRole('ROLE_USER,ROLE_ADMIN')" />
@@ -38,12 +42,19 @@
                        access="hasAnyRole('ROLE_USER,ROLE_ADMIN')" />
          <intercept-url pattern="/delete"
                        access="hasRole('ROLE_ADMIN')" />
+<<<<<<< HEAD
         
+=======
+>>>>>>> 7e3c89a3fdc3c01a583d31dbb6ac23104d6ed3f4
         <access-denied-handler error-page="/403" />
 
         <form-login login-page='/login'
                     login-processing-url="/dologin"
+<<<<<<< HEAD
                     default-target-url="/feed"
+=======
+                    default-target-url="/index"
+>>>>>>> 7e3c89a3fdc3c01a583d31dbb6ac23104d6ed3f4
                     always-use-default-target="false"
                     authentication-failure-url="/login?error=true"
                     username-parameter="username"

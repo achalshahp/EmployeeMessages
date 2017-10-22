@@ -10,7 +10,11 @@
           class="org.springframework.jdbc.datasource.DriverManagerDataSource">
 
         <property name="driverClassName" value="com.mysql.jdbc.Driver" />
+<<<<<<< HEAD
         <property name="url" value="jdbc:mysql://localhost:3306/twitterintuit" />
+=======
+        <property name="url" value="jdbc:mysql://localhost:3306/minitwitter" />
+>>>>>>> 7e3c89a3fdc3c01a583d31dbb6ac23104d6ed3f4
         <property name="username" value="root" />
         <property name="password" value="" />
     </bean>

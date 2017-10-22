@@ -1,9 +1,16 @@
+<<<<<<< HEAD
 # TwitterIntuit
 ### A Twitter like REST service for Employees
+=======
+# EmployeeTwitter
+
+### A Spring based Twitter like REST Service for Employees
+>>>>>>> 7e3c89a3fdc3c01a583d31dbb6ac23104d6ed3f4
 
 #### Objective
 
 As part of enhancing our internal services which are available to our employees, we would like to build a Twitter like solution for our employees, where employees can tweet and have followers. 
+<<<<<<< HEAD
 
 #### Requirements
 
@@ -63,3 +70,5 @@ As part of enhancing our internal services which are available to our employees,
     If running from a browser go to : http://localhost:8080/TwitterIntuit/ 
   * to use the endpoints of the application, you first need to successfully login
 6. Alternatively, for testing the CRUD actions you can even use [Postman](www.getpostman.com).
+=======
+>>>>>>> 7e3c89a3fdc3c01a583d31dbb6ac23104d6ed3f4
