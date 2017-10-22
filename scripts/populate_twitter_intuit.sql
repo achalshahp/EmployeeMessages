@@ -2,7 +2,7 @@ USE twitterintuit;
 -- ADD USERS TO THE DATABASE
 
 INSERT INTO users (username, password, enabled) VALUES ('jdoe', 'test', 1);
-INSERT INTO users (username, password, enabled) VALUES ('jdoe1', 'password', 1);
+INSERT INTO users (username, password, enabled) VALUES ('jdoe1', 'admin', 1);
 INSERT INTO users (username, password, enabled) VALUES ('user1', 'pass', 1);
 INSERT INTO users (username, password, enabled) VALUES ('user2', 'user2', 1);
 INSERT INTO users (username, password, enabled) VALUES ('user3', 'user3', 1);
@@ -14,7 +14,7 @@ INSERT INTO users (username, password, enabled) VALUES ('user7', 'user7', 1);
 -- ADD USER ROLES TO THE DATABASE
 
 INSERT INTO user_roles (user_username, role) VALUES ('jdoe', 'USER');
-INSERT INTO user_roles (user_username, role) VALUES ('jdoe5', 'ADMIN');
+INSERT INTO user_roles (user_username, role) VALUES ('jdoe1', 'ADMIN');
 INSERT INTO user_roles (user_username, role) VALUES ('user1', 'ADMIN');
 INSERT INTO user_roles (user_username, role) VALUES ('user2', 'USER');
 INSERT INTO user_roles (user_username, role) VALUES ('user3', 'USER');

@@ -4,7 +4,6 @@
 <head>
   <title>Employee Twitter :: Login</title>
 </head>
-<<<<<<< HEAD
 <body style="margin: 0px;background-color:lightblue">
   <jsp:include page="_menu.jsp" />
 
@@ -12,15 +11,6 @@
 
     <h1>Login</h1>
 	<h4>Please use your corp credentials to login.</h4>
-=======
-<body style="margin: 0px;">
-  <jsp:include page="_menu.jsp" />
-
-  <div style="margin-left:30px; margin-top: 30px;">
-
-    <h1>Login</h1>
-
->>>>>>> 7e3c89a3fdc3c01a583d31dbb6ac23104d6ed3f4
     <c:if test="${param.error == 'true'}">
       <div style="color:grey;margin:10px 0px;">
         Login Failed!!!<br/>

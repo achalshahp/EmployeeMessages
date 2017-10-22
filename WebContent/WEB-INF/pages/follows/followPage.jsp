@@ -6,7 +6,7 @@
   <title>Employee Twitter :: Follow / Unfollow</title>
   <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
 </head>
-<<<<<<< HEAD
+
 <body style="margin: 0px;background-color:lightblue">
   <jsp:include page="../_menu.jsp" />
 
@@ -34,21 +34,6 @@
 	<div style="margin-left:30px">
  	<br/>
  	<b>Here you can follow/unfollow users :</b>
-=======
-<body style="margin: 0px;">
-  <jsp:include page="../_menu.jsp" />
-
-  <div style="margin-left:30px; margin-top: 30px;">
-
-    <h1 style="color: grey;">Follow / Unfollow Users</h1>
-
-    <c:if test="${not empty notice}">
-      ${notice}
-    </c:if>
-
-    <br/>
-
->>>>>>> 7e3c89a3fdc3c01a583d31dbb6ac23104d6ed3f4
     <c:forEach var="user" items="${listUsers}" varStatus="status">
       <p>
         <c:choose>
