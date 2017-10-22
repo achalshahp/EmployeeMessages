@@ -49,7 +49,7 @@
       var tweet = document.getElementById("tweet").value;
       $.post("${pageContext.request.contextPath}/tweet/create",{tweet:tweet,commandName:"tweetForm"}).always(function(data){
         alert(data.message);
-        window.location = "${pageContext.request.contextPath}/tweets/formatted";
+        window.location = "${pageContext.request.contextPath}/tweets/all";
       });
     }
   </script>
