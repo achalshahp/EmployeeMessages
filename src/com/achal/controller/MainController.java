@@ -41,5 +41,10 @@ public class MainController {
     // Body : username : username
     //        password : password 
     // This will open the feeds page which shows the most recent tweets by the user that the current logged in user follows.
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    public String loginPage(Model model ) {
+        return "loginPage";
+    }
+
 
 }
