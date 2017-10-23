@@ -3,13 +3,10 @@ package com.achal.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-=======
->>>>>>> 7e3c89a3fdc3c01a583d31dbb6ac23104d6ed3f4
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-<<<<<<< HEAD
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;

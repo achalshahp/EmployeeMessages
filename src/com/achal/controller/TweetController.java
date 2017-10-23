@@ -6,16 +6,10 @@ import com.achal.dao.TweetDAO;
 import com.achal.model.Follow;
 import com.achal.model.Tweet;
 import com.achal.model.UserStatus;
-
-
 import org.apache.commons.collections.ListUtils;
-//import org.apache.tomcat.util.codec.binary.StringUtils;
-=======
 import com.achal.dao.TweetDAO;
 import com.achal.model.Tweet;
 import com.achal.model.UserStatus;
-
->>>>>>> 7e3c89a3fdc3c01a583d31dbb6ac23104d6ed3f4
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -23,13 +17,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.support.RedirectAttributes;
-<<<<<<< HEAD
 import org.apache.commons.lang.StringUtils;
-
 import java.util.ArrayList;
-=======
-
->>>>>>> 7e3c89a3fdc3c01a583d31dbb6ac23104d6ed3f4
 import java.util.List;
 
 @Controller

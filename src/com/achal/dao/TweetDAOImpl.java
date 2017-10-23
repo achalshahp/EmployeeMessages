@@ -2,13 +2,9 @@ package com.achal.dao;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
-<<<<<<< HEAD
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-=======
-import java.util.List;
->>>>>>> 7e3c89a3fdc3c01a583d31dbb6ac23104d6ed3f4
 
 import javax.sql.DataSource;
 

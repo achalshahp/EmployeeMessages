@@ -12,7 +12,7 @@
     <b>
     	<a href="${pageContext.request.contextPath}/tweet/new" style="text-decoration:none; color: black; margin-left: 30px;">Compose New Tweet</a>
     	&nbsp | &nbsp
-    	<a href=${pageContext.request.contextPath}/tweets/all style="text-decoration:none; color: black;">Read Tweets</a>
+    	<a href="${pageContext.request.contextPath}/tweets/all" style="text-decoration:none; color: black;">Read Tweets</a>
     	&nbsp | &nbsp
     	<a href="${pageContext.request.contextPath}/following" style="text-decoration:highlight; color: red;">List Users I Follow</a>
     	&nbsp | &nbsp
