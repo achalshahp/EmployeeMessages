@@ -24,12 +24,8 @@ public class FollowDAOImpl implements FollowDAO {
         this.dataSource = dataSource;
         this.jdbcTemplate = new JdbcTemplate(dataSource);
     }
-<<<<<<< HEAD
     
     // Update the db to insert a new user being followed by the logged in user.
-=======
-
->>>>>>> 7e3c89a3fdc3c01a583d31dbb6ac23104d6ed3f4
     @Override
     public int follow(String user) {
         String username = getUsername();
@@ -42,10 +38,7 @@ public class FollowDAOImpl implements FollowDAO {
         }
     }
 
-<<<<<<< HEAD
     // Update the db to remove a user being followed by the logged in user.
-=======
->>>>>>> 7e3c89a3fdc3c01a583d31dbb6ac23104d6ed3f4
     @Override
     public int unfollow(String user){
         String username = getUsername();
@@ -57,12 +50,8 @@ public class FollowDAOImpl implements FollowDAO {
             return 0;
         }
     }
-<<<<<<< HEAD
     
     // Get a list of users and toggle the follow/unfollow button based on the data from db.
-=======
-
->>>>>>> 7e3c89a3fdc3c01a583d31dbb6ac23104d6ed3f4
     @Override
     public List<UserStatus> listUsers(){
         final String username = getUsername();
@@ -90,12 +79,8 @@ public class FollowDAOImpl implements FollowDAO {
 
         return listUsers;
     }
-<<<<<<< HEAD
     
     // Get the list of all users that the current logged in user is following from the db.
-=======
-
->>>>>>> 7e3c89a3fdc3c01a583d31dbb6ac23104d6ed3f4
     @Override
     public List<Follow> listFollowing(){
         String username = getUsername();
@@ -115,10 +100,7 @@ public class FollowDAOImpl implements FollowDAO {
         return listFollowing;
     }
 
-<<<<<<< HEAD
     // Get the list of all users that are following the current logged in use from the db.
-=======
->>>>>>> 7e3c89a3fdc3c01a583d31dbb6ac23104d6ed3f4
     @Override
     public List<Follow> listFollowers(){
         String username = getUsername();

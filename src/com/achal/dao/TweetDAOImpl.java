@@ -33,22 +33,13 @@ public class TweetDAOImpl implements TweetDAO {
         this.dataSource = dataSource;
         this.jdbcTemplate = new JdbcTemplate(dataSource);
     }
-<<<<<<< HEAD
     
     // Insert into the db the values of a new tweet.
-=======
-
->>>>>>> 7e3c89a3fdc3c01a583d31dbb6ac23104d6ed3f4
     @Override
     public int add(Tweet tweet) {
         String username = getUsername();
         String sql = "INSERT INTO tweets (tweet, user_username)" + " VALUES (?, ?)";
         try {
-<<<<<<< HEAD
-=======
-        	System.out.println("HERE THE TWEET IS : " + tweet.getTweet());
-        	System.out.println("THE SQL INSIDE THE CREATE TWEET IS : " + sql);
->>>>>>> 7e3c89a3fdc3c01a583d31dbb6ac23104d6ed3f4
             return jdbcTemplate.update(sql, tweet.getTweet(), username);
         }
         catch (DataIntegrityViolationException e) {
@@ -56,15 +47,11 @@ public class TweetDAOImpl implements TweetDAO {
         }
     }
     
-<<<<<<< HEAD
     // Search and return all the tweets
     @Override
     public List<Tweet> searchTweets(String search) {
-=======
     @Override
     public List<Tweet> searchTweets(String search) {
-    	System.out.println("NOW I AM INSIDE THE SEARCH TWEETS");
->>>>>>> 7e3c89a3fdc3c01a583d31dbb6ac23104d6ed3f4
         String sql = "SELECT * FROM tweets WHERE tweet LIKE '%" + search + "%' ORDER BY tweet_id DESC";
         List<Tweet> listTweets = jdbcTemplate.query(sql, new RowMapper<Tweet>() {
 
@@ -75,23 +62,14 @@ public class TweetDAOImpl implements TweetDAO {
             tweet.setId(rs.getInt("tweet_id"));
             tweet.setTweet(rs.getString("tweet"));
             tweet.setUser_username(rs.getString("user_username"));
-<<<<<<< HEAD
-=======
-            System.out.println("THE VALUE OF TWEET HERE IS : " + tweet);
-            System.out.println("THE TWEET IN THIS ROUND IS" + tweet.getTweet());
->>>>>>> 7e3c89a3fdc3c01a583d31dbb6ac23104d6ed3f4
             return tweet;
             }
         });
 
         return listTweets;
     }
-<<<<<<< HEAD
     
     // Search and return only the tweets for a specific user.
-=======
-
->>>>>>> 7e3c89a3fdc3c01a583d31dbb6ac23104d6ed3f4
     @Override
     public List<Tweet> searchUserTweets(String username, String search) {
         String sql = "SELECT * FROM tweets WHERE user_username = '"+ username+"' AND tweet LIKE '%" + search + "%' ORDER BY tweet_id DESC";
@@ -112,7 +90,6 @@ public class TweetDAOImpl implements TweetDAO {
         return listTweets;
     }
     
-<<<<<<< HEAD
     // Delete tweet from the db.
     @Override
 	public int delete(Tweet user_username, Tweet tweet) {
@@ -125,26 +102,12 @@ public class TweetDAOImpl implements TweetDAO {
 		String sql = "DELETE from tweets where user_username = ? AND tweet = ?";
         try {
         	int rowCount = jdbcTemplate.update(sql,new Object[] {username,tweetDelete});
-            System.out.println("THE NO OF ROWS DELETED IS : " + rowCount);
             return rowCount;
-=======
-    @Override
-	public int delete(Tweet user_username, Tweet tweet) {
-		String tweet_here = tweet.getTweet();
-		String username = tweet_here.split(",")[0];
-		String tweetDelete = tweet_here.split(",")[1]; 
-		String sql = "DELETE from tweets where user_username = ? AND tweet = ?";
-        try {
-        	int abc = jdbcTemplate.update(sql,new Object[] {username,tweetDelete});
-            System.out.println("THE NO OF ROWS DELETED IS : " + abc);
-            return abc;
->>>>>>> 7e3c89a3fdc3c01a583d31dbb6ac23104d6ed3f4
         }
         catch (DataIntegrityViolationException e) {
             return 0;
         }
 	}
-<<<<<<< HEAD
     
     // Search and return a list of tweets for only the users followed by the current logged in user.
     @Override
@@ -163,8 +126,6 @@ public class TweetDAOImpl implements TweetDAO {
         });
         return listTweets;
 	}
-=======
->>>>>>> 7e3c89a3fdc3c01a583d31dbb6ac23104d6ed3f4
 
     public String getUsername() {
         String username;

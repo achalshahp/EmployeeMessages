@@ -1,6 +1,5 @@
 package com.achal.controller;
 
-<<<<<<< HEAD
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -45,27 +44,5 @@ public class MainController {
     // Body : username : username
     //        password : password 
     // This will open the feeds page which shows the most recent tweets by the user that the current logged in user follows.
-=======
 
-@Controller
-public class MainController {
-
-    // WELCOME PAGE
-    @RequestMapping(value = "/", method = RequestMethod.GET)
-    public String welcomePage(Model model) {
-        return "welcomePage";
-    }
-
-    // INDEX PAGE
-    @RequestMapping(value = "/index", method = RequestMethod.GET)
-    public String indexPage(Model model) {
-        return "indexPage";
-    }
-
-    // LOGIN PAGE
->>>>>>> 7e3c89a3fdc3c01a583d31dbb6ac23104d6ed3f4
-    @RequestMapping(value = "/login", method = RequestMethod.GET)
-    public String loginPage(Model model ) {
-        return "loginPage";
-    }
 }

@@ -15,9 +15,5 @@ public interface TweetDAO {
     List<Tweet> searchTweets(String search);
     List<Tweet> searchUserTweets(String username, String search);
     int delete(Tweet user_username, Tweet tweet);
-<<<<<<< HEAD
-	//List<Tweet> searchTweetsForUser(String username);
     List<Tweet> searchTweetsForUser(String username);
-=======
->>>>>>> 7e3c89a3fdc3c01a583d31dbb6ac23104d6ed3f4
 }

@@ -19,7 +19,6 @@ public class FollowController {
     @Autowired
     private FollowDAO followDAO;
 
-<<<<<<< HEAD
     // FOLLOW AN USER - This can be used to follow an user from the follow/unfollow page.
     // POST call to follow an user e.g.
     // URL : http://localhost:8080/TwitterIntuit/users/follow
@@ -27,9 +26,6 @@ public class FollowController {
     // Headers : Content-Type : application/x-www-form-urlencoded
     // Body : username : username
     //        password : password 
-=======
-    // FOLLOW USER
->>>>>>> 7e3c89a3fdc3c01a583d31dbb6ac23104d6ed3f4
     @RequestMapping(value = "/users/follow", method = RequestMethod.POST, produces = {"application/json","application/xml"})
     @ResponseBody
     public ResponseEntity followUser(@ModelAttribute("followForm") UserStatus user) {
@@ -42,8 +38,6 @@ public class FollowController {
         }
     }
 
-
-<<<<<<< HEAD
     // UNFOLLOW USER- This can be used to unfollow an user from the follow/unfollow page.
     // POST call to unfollow an user e.g.
     // URL : http://localhost:8080/TwitterIntuit/users/unfollow
@@ -51,9 +45,6 @@ public class FollowController {
     // Headers : Content-Type : application/x-www-form-urlencoded
     // Body : username : username
     //        password : password 
-=======
-    // UNFOLLOW USER
->>>>>>> 7e3c89a3fdc3c01a583d31dbb6ac23104d6ed3f4
     @RequestMapping(value = "/users/unfollow", method = RequestMethod.POST, produces = {"application/json","application/xml"})
     @ResponseBody
     public ResponseEntity unfollowUser(@ModelAttribute("unfollowForm") UserStatus user) {
@@ -66,14 +57,10 @@ public class FollowController {
         }
     }
 
-<<<<<<< HEAD
     // FOLLOW PAGE - This will show a list of users and then you can call either follow/unfollow to follow/unfollow those users.
     // GET call to show the list of users e.g.
     // URL : http://localhost:8080/TwitterIntuit/users/
     // VERB : GET
-=======
-    // FOLLOW PAGE
->>>>>>> 7e3c89a3fdc3c01a583d31dbb6ac23104d6ed3f4
     @RequestMapping(value = "/users", method = RequestMethod.GET)
     @ResponseBody
     public ModelAndView followPage(ModelAndView model) {
@@ -89,16 +76,11 @@ public class FollowController {
         return model;
     }
 
-<<<<<<< HEAD
     // FOLLOWING PAGE - This will show a list of users that the current logged in user is following.
     // GET call to how a list of users that the current logged in user is following e.g.
     // URL : http://localhost:8080/TwitterIntuit/following
     // VERB : GET
     @RequestMapping(value = "/following", method = RequestMethod.GET)
-=======
-    // FOLLOWING PAGE
-    @RequestMapping(value = "/following/formatted", method = RequestMethod.GET)
->>>>>>> 7e3c89a3fdc3c01a583d31dbb6ac23104d6ed3f4
     @ResponseBody
     public ModelAndView following(ModelAndView model) {
         List<Follow> listFollowing = followDAO.listFollowing();
@@ -107,16 +89,11 @@ public class FollowController {
         return model;
     }
 
-<<<<<<< HEAD
     // FOLLOWERS PAGE- This will show a list of users that are following the current logged in user 
     // GET call to how a list of users that are following the current logged in user e.g.
     // URL : http://localhost:8080/TwitterIntuit/followers
     // VERB : GET
     @RequestMapping(value = "/followers", method = RequestMethod.GET)
-=======
-    // FOLLOWERS PAGE
-    @RequestMapping(value = "/followers/formatted", method = RequestMethod.GET)
->>>>>>> 7e3c89a3fdc3c01a583d31dbb6ac23104d6ed3f4
     @ResponseBody
     public ModelAndView followers(ModelAndView model) {
         List<Follow> listFollowers = followDAO.listFollowers();
@@ -124,24 +101,3 @@ public class FollowController {
         model.setViewName("follows/followersPage");
         return model;
     }
-
-<<<<<<< HEAD
-    
-=======
-    // FOLLOWING PAGE AS XML OR JSON
-    @RequestMapping(value = "/following", method = RequestMethod.GET, produces = {"application/json","application/xml"})
-    @ResponseBody
-    public List<Follow> following_XML_JSON() {
-        List<Follow> listFollowing = followDAO.listFollowing();
-        return listFollowing;
-    }
-
-    // FOLLOWERS PAGE AS XML OR JSON
-    @RequestMapping(value = "/followers", method = RequestMethod.GET, produces = {"application/json","application/xml"})
-    @ResponseBody
-    public List<Follow> followers_XML_JSON() {
-        List<Follow> listFollowers = followDAO.listFollowers();
-        return listFollowers;
-    }
->>>>>>> 7e3c89a3fdc3c01a583d31dbb6ac23104d6ed3f4
-}
