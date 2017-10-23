@@ -18,7 +18,7 @@ As part of enhancing our internal services which are available to our employees,
 1. Clone the project from : https://github.com/achalshahp/TwitterIntuit or run this command :
     git clone https://github.com/achalshahp/TwitterIntuit.git
 
-2. This project is expecting the user to have MySQL alreadys installed on their machine. If not you can get if from [here](https://dev.mysql.com/downloads/) or can even use brew to install it if working on a [MacOS](https://gist.github.com/nrollr/3f57fc15ded7dddddcc4e82fe137b58e).
+2. This project is expecting the user to have MySQL alreadys installed on their machine. If not you can get if from [here](https://dev.mysql.com/downloads/) or can even use brew to install it you are running it on [MacOS](https://gist.github.com/nrollr/3f57fc15ded7dddddcc4e82fe137b58e).
 3. There are two ways to push the data into the mysql db and tables.
    
    * **a)** Change your account to root and then issue the following two commands:
